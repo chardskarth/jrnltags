@@ -1,0 +1,16 @@
+{
+  "name": "jrnltags",
+  "version": "1.0.0",
+  "description": "Parse jrnl.vim syntax and check against jrnl --tags",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "st": "node --experimental-modules --no-warnings index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0"
+  }
+}

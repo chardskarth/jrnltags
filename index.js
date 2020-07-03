@@ -44,12 +44,12 @@ ${printInSplit(keywords.mind, yellow)}
 ${printInSplit(keywords.soul, orange)}
 - - - - - - - - - - - - - - - - - - - - - 
 
--- ${red('Reality stone')}
-${printInSplit(keywords.reality, red)}
-- - - - - - - - - - - - - - - - - - - - - 
-
 -- ${cyan('Space stone')}
 ${printInSplit(keywords.space, cyan)}
+- - - - - - - - - - - - - - - - - - - - - 
+
+-- ${red('Reality stone')}
+${printInSplit(keywords.reality, red)}
 - - - - - - - - - - - - - - - - - - - - - 
 
 -- ${green('Time stone')}

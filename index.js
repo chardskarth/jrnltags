@@ -1,5 +1,3 @@
-import chalk from 'chalk'
-
 import getColorsFromVimrc from './lib/parse-rainbow-from-vimrc.js'
 import getKeywordsFromVimrc from './lib/parse-keyword-from-vimrc.js'
 import printInSplit from './lib/print-in-split.js'
@@ -10,17 +8,16 @@ const log = console.log
 const VIMRC_PATH = '~/.vimrc'
 const VIM_JRNL_SYNTAX_PATH = '~/.vim/syntax/jrnl.vim'
 
-const [
-	violet,
-	blue,
+const {
+	indigo,
+	teal,
 	cyan,
 	green,
 	yellow,
 	orange,
 	red,
-	magenta,
-] = getColorsFromVimrc(VIMRC_PATH)
-	.map(ii => chalk.ansi256(ii))
+	fuchsia,
+} = getColorsFromVimrc(VIMRC_PATH)
 
 const {
 	keywordsGrouped: keywords,
@@ -29,11 +26,9 @@ const {
 
 const missingKeywordsFromJrnl = getMissingKeywordsFromJrnl(existingKeywords)
 
-chalk.enabled = true
-chalk.supportsColor = true
 log(`
--- ${violet('Power stone')}
-${printInSplit(keywords.power, violet)}
+-- ${indigo('Power stone')}
+${printInSplit(keywords.power, indigo)}
 - - - - - - - - - - - - - - - - - - - - - 
 
 -- ${yellow('Mind stone')}
@@ -56,10 +51,10 @@ ${printInSplit(keywords.reality, red)}
 ${printInSplit(keywords.time, green)}
 - - - - - - - - - - - - - - - - - - - - - 
 
--- ${magenta('Miscellaneous')}
-${printInSplit(keywords.misc, magenta)}
+-- ${fuchsia('Miscellaneous')}
+${printInSplit(keywords.misc, fuchsia)}
 - - - - - - - - - - - - - - - - - - - - - 
 
--- ${blue('Missing tags')}
-${printInSplit(missingKeywordsFromJrnl, blue)}
+-- ${teal('Missing tags')}
+${printInSplit(missingKeywordsFromJrnl, teal)}
 `)

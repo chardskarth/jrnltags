@@ -5,7 +5,6 @@ import getMissingKeywordsFromJrnl from './lib/get-missing-from-jrnl.js'
 
 const log = console.log
 
-const VIMRC_PATH = '~/.vimrc'
 const VIM_JRNL_SYNTAX_PATH = '~/.vim/syntax/jrnl.vim'
 
 const {
@@ -17,7 +16,7 @@ const {
 	orange,
 	red,
 	fuchsia,
-} = getColorsFromVimrc(VIMRC_PATH)
+} = getColorsFromVimrc(VIM_JRNL_SYNTAX_PATH)
 
 const {
 	keywordsGrouped: keywords,

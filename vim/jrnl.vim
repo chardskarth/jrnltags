@@ -34,24 +34,14 @@ syntax match jdate /\d\{4}-\d\d-\d\d/
 syntax match jtime /\d\d:\d\d/
 syntax region entryLine start=/\d\{4}-\d\d-\d\d \d\d:\d\d/ end=/$/ contains=ALL
 
-highlight def link jtagpower RainbowLevel0
-highlight def link jtagsoul RainbowLevel5
-highlight def link jtagspace RainbowLevel2
-highlight def link jtagtime RainbowLevel3
-highlight def link jtagreality RainbowLevel6
-highlight def link jtagmind RainbowLevel4
-highlight def link jtagmisc RainbowLevel7
+highlight jtagpower ctermfg=099
+highlight jtagsoul ctermfg=208
+highlight jtagspace ctermfg=087
+highlight jtagtime ctermfg=046
+highlight jtagreality ctermfg=196
+highlight jtagmind ctermfg=190
+highlight jtagmisc ctermfg=201
 
-
-"hi! RainbowLevel0 ctermfg=093|"ctermfg=068 guifg=#6699cc
-"hi! RainbowLevel1 ctermfg=027|"ctermfg=203 guifg=#ec5f67
-"hi! RainbowLevel2 ctermfg=051|"ctermfg=221 guifg=#fac863
-"hi! RainbowLevel3 ctermfg=46|"ctermfg=114 guifg=#99c794
-"hi! RainbowLevel4 ctermfg=190|"ctermfg=176 guifg=#c594c5
-"hi! RainbowLevel5 ctermfg=208|"ctermfg=209 guifg=#f99157
-"hi! RainbowLevel6 ctermfg=088|"ctermfg=073 guifg=#62b3b2
-"hi! RainbowLevel7 ctermfg=201|"ctermfg=137 guifg=#ab7967
-"
 highlight def link jdate Identifier
 highlight def link jtime Global
 highlight def entryLine ctermfg=250 guifg=Gray
